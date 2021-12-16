@@ -1,0 +1,56 @@
+/* Arquivo style.css da página Exercício 2*/
+
+body {
+    /*Regras para texto*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    /*Regras de Decoração*/
+    background-color: #EBEBEA;
+}
+
+main {
+    /*Regras para texto*/
+    font-size: 150%;
+
+    /*Cores*/
+    background-color: #FAFAFA;
+
+    /*Centraliza a caixa de Login*/
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+    /*Define o tamanho da caixa*/
+    width: 40%;
+    padding: 5%;
+    border: 1px solid #9B9B9B;
+    border-radius: 10px;
+}
+
+input{
+    /*Regras de tamanho e posicionamento*/
+    display: block;
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0 15px;
+    border: 1px solid #9B9B9B;
+    border-radius: 5px;
+}
+
+input:focus{
+    border: 1px solid #FF71BA;
+    box-shadow: 0px 0px 5px #FE7CBF;
+    outline: none;
+}
+
+button {
+    /*Regras de tamanho e posicionamento*/
+    display: block;
+    padding: 8px;
+    border: 1px solid #9B9B9B;
+}
+
+button:active{
+    background-color: #FE7CBF;
+}
