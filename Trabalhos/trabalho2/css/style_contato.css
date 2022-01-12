@@ -1,0 +1,118 @@
+/* Arquivo style.css da página...*/
+
+body {
+    /*Regras de texto*/
+    font-family: Helvetica, Arial, sans-serif;
+
+    /*Regras para tamanho*/
+    margin: 0%;
+
+    /*Cores*/
+    background-color: #B4CCF1;
+}
+
+header, nav{
+    /*Regras para texto*/
+    font-size: 150%;
+    text-align: center;
+
+    /*Regras para tamanho*/
+    width: 100%; 
+    height: 100%;
+    top: 0%;
+    padding: 1%;
+}
+
+#profileImage{
+    /*Regras para tamanho*/
+    width: 250px; 
+    height: 200px;
+    border-radius: 100px;
+} 
+
+nav li{
+    /*Regras para tamanho*/
+    display: inline;
+    padding: 1%;
+    
+}
+
+nav a{
+    /*Regras para texto*/
+    text-decoration: none;
+}
+
+main {
+    /*Regras para texto*/
+    font-size: 130%;
+
+    /*Regras para tamanho*/
+    position: absolute;
+    top:110%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+fieldset{
+    /*Regras para tamanho*/
+    border: 5px solid #9B9B9B;
+}
+
+fieldset div{
+    margin: 5px;
+}
+
+label{
+    /*Define o posicionamento*/
+    display:block;
+}
+
+input, select{
+    /*Define o tamanho da caixa*/
+    width: 250px;
+    border: 1px solid #9B9B9B;
+    border-radius: 10px;
+}
+
+input[type="radio"]{
+    /*Define o tamanho da caixa*/
+    width: 10px;
+    display:inline;
+}
+
+textarea{
+    /*Define o tamanho da caixa*/
+    width: 350px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+footer{
+    /*Regras para texto*/
+    text-align: center;
+
+    /*Regras para tamanho*/
+    position:absolute;
+    top:180%;
+    left:20%;
+    width:60%;
+
+}
+
+.validacao::placeholder{
+    color:red;
+    font-size: 12px;
+}
+
+.validacao:invalid + span::after {
+    content: '❌';
+    color: red;
+}
+
+.validacao:valid + span::after{
+    content: '✓';
+    color: green;
+}
+
+    

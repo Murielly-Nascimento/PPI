@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang = "pt-BR">
+
+    <head>
+       <meta charset = "UTF-8">
+       <meta name="description" content="Julia Lima é professora de Inglês.">
+       <title>Contato</title> 
+       <link rel="stylesheet" href="css/style_contato.css">
+    </head> 
+
+    <body>
+         <!-- Cabeçalho principal, presente em todas as páginas-->
+         <header>
+            <h1>
+                <img src = "imagens/londres.png" alt = "Ícone do Big Bang">
+                Juliana Lima 
+                <img src = "imagens/avatar.png" alt = "Foto de Juliana" id = "profileImage">
+            </h1>  
+        </header>
+
+        <!--Menu de naveção, com links para todas as páginas-->
+        <nav>
+            <ul>
+                <li><a href = "index.html">Main</a></li>
+                <li><a href = "contato.html">Contato</a></li>
+                <li><a href = "galeria.html">Galeria</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <form action = "cadastro.php" method = "post" enctype="multipart/form-data">
+
+                <!--Dados Pessoais-->
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div>
+                        <label for = "nome">Nome:</label>
+                        <input type = "text" id = "nome" name = "nome" required>
+                    </div>
+                    <div>
+                        <label for = "email">E-mail:</label>
+                        <input type = "email" id = "email" name = "email" class = "validacao" required>
+                        <span></span>
+                    </div>
+                    <div>
+                        <label for = "idade">Idade:</label>
+                        <input type = "number" id = "idade" name = "idade" class = "validacao" required>
+                        <span></span>
+                    </div>
+                    <div>
+                        <label for = "telefone">Telefone:</label>
+                        <input type = "tel" id = "telefone" name = "telefone" class = "validacao" required>
+                        <span></span>
+                    </div>
+                    <div>
+                        <label for = "datanascimento"> Data de Nascimento:</label>
+                        <input type = "date" id = "datanascimento" name = "datanascimento">
+                    </div>
+                    <div>
+                        <label>Sexo:</label>
+                        <input type = "radio" name = "sexo" value = "feminino" checked> Feminino
+                        <input type = "radio" name = "sexo" value = "masculino"> Masculino
+                    </div>
+                    <div>
+                        <label for = "estadocivil">Estado Civil:</label>
+                        <select id = "estadocivil" name = "estadocivil">
+                            <option value = "solteiro"> Solteiro
+                            <option value = "casado" selected> Casado
+                            <option value = "divorciado"> Divorciado
+                            <option value = "viuvo"> Viúvo
+                        </select>
+                    </div>
+                </fieldset>
+
+                <!--Dados da Empresa-->
+                <fieldset>
+                    <legend>Dados da Empresa</legend>
+                    <div>
+                        <label for = "cnpj">CNPJ:</label>
+                        <input type = "text" id = "cnpj" name = "cnpj" pattern="\d{2}\.\d{3}\.\d{3}\/d{4}-d{2}">
+                    </div>
+                    <div>
+                        <label for = "razaosocial">Razão Social:</label>
+                        <input type = "text" id = "razaosocial" name = "razaosocial">
+                    </div>
+                    <div>
+                        <label for = "ramo">Ramo de Atuação:</label>
+                        <input type = "text" id = "ramo" name = "ramo">
+                    </div>
+                </fieldset>
+
+                <!--Endereço-->
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <div>
+                        <label for = "cep">CEP:</label>
+                        <input type = "text" id = "cep" name = "cep" pattern="\d{5}-d{3}" required>
+                    </div>
+                    <div>
+                        <label for = "tipologradouro">Tipo de Logradouro:</label>
+                        <select id = "tipologradouro" name = "tipologradouro" required>
+                            <option value="">Escolha</option>
+                            <option value = "rua"> Rua
+                            <option value = "avenida"> Avenida
+                            <option value = "praça"> Praça
+                        </select>
+                    </div>
+                    <div>
+                        <label for = "cidade">Cidade:</label>
+                        <input type = "text" id = "cidade" name = "cidade" required>
+                    </div>
+                    <div>
+                        <label for = "estado">Estado:</label>
+                        <input type = "text" id = "estado" name = "estado" pattern = "{A-Za-z}{2}" required>
+                    </div>
+                </fieldset>
+
+                <!--Interesses-->
+                <fieldset>
+                    <legend>Interesses</legend>
+                    <textarea name = "interesses"></textarea>
+                </fieldset>
+
+                <!--Habilidades-->
+                <fieldset>
+                    <legend>Habilidades</legend>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Língua</th>
+                                <th>Proficiência</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label for = "ingles">Inglês</label>
+                                    <input type = "checkbox" id = "ingles" name = "lingua" value = "ingles"> 
+                                </td>
+                                <td>
+                                    <input type = "range" name = "proficiencia" min = "0" max = "10"> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for = "frances">Francês</label>
+                                    <input type = "checkbox" id = "frances" name = "lingua" value = "frances"> 
+                                </td>
+                                <td>
+                                    <input type = "range" name = "proficiencia" min = "0" max = "10"> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for = "alemao">Alemão</label>
+                                    <input type = "checkbox" id = "alemao" name = "lingua" value = "alemao"> 
+                                </td>
+                                <td>
+                                    <input type = "range" name = "proficiencia" min = "0" max = "10"> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+            
+        </main>
+
+        <!--Rodapé-->
+        <footer>
+            <p>© Copyright 2021. Todos os direitos reservados</p>
+        </footer>
+
+    </body>
+
+</html>
