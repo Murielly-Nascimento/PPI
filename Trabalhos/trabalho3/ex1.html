@@ -3,11 +3,15 @@
 
     <head>
        <meta charset = "UTF-8">
+       <meta name="description" content="Bolshoi é uma renomada companhia de dança">
        <title>Exercício 1</title> 
+       <link rel="stylesheet" href="css/style_ex1.css">
+       <script src="js/script_ex1.js"></script>
     </head> 
 
     <body>
         
+        <!-- Cabeçalho principal-->
         <header>
             <img src="imagens/bolshoi.png" alt="Ícone Bolshoi">
             <h1>
@@ -15,34 +19,56 @@
             </h1>
         </header>
         
+        <!--Menu de naveção-->
         <nav>
             <ul>
-                <li>Sobre</li>
-                <li>Cursos</li>
-                <li>Apresentações</li>
+                <li><a href="ex1.html">Sobre</a></li>
+                <li><a href="ex3.html">Cursos</a></li>
+                <li><a href="ex2.html">Apresentações</a></li>
             </ul>
         </nav>
 
+        <!--Conteúdo principal da página-->
         <main>
             <article>
-                <h2>Seja Bem-Vindo</h2>
-                <p>
-                    A Escola do Teatro Bolshoi no Brasil funciona desde 15 de março de 2000,<br> 
-                    na cidade catarinense de Joinville. É a única filial do famoso Teatro Bolshoi da Rússia.
-                </p>
-                <p>
-                    Proporciona a formação de artistas da dança, ensinando a técnica de<br>
-                    balé segundo a metodologia Vaganova, dança contemporânea e disciplinas complementares.<br> 
-                    Com alunos vindos de diferentes estados brasileiros e do exterior, a instituição ressalta<br> 
-                    o seu compromisso social, ao conceder 100% de bolsas de estudo e benefícios para todos os alunos.<br>
-                    Uma Seleção acontece todos os anos para o ingresso de novos bailarinos.<br>
-                </p>
-                <p>
-                    <strong>Somos uma Escola que trabalha com cultura, educação e responsabilidade social.</strong>
-                </p>
+                <!--Apresentação da Escola Bolshoi-->
+                    <h2>Seja Bem-Vindo</h2>
+                    <p>
+                        A Escola do Teatro Bolshoi no Brasil funciona desde 15 de março de 2000,<br> 
+                        na cidade catarinense de Joinville. É a única filial do famoso Teatro Bolshoi da Rússia.
+                    </p>
+                    <p>
+                        Proporciona a formação de artistas da dança, ensinando a técnica de<br>
+                        balé segundo a metodologia Vaganova, dança contemporânea e disciplinas complementares.<br> 
+                        Com alunos vindos de diferentes estados brasileiros e do exterior, a instituição ressalta<br> 
+                        o seu compromisso social, ao conceder 100% de bolsas de estudo e benefícios para todos os alunos.<br>
+                        Uma Seleção acontece todos os anos para o ingresso de novos bailarinos.<br>
+                    </p>
+                    <p>
+                        <strong>Somos uma Escola que trabalha com cultura, educação e responsabilidade social.</strong>
+                    </p>
+                <button type="button" id="btnOpenModal">Repertórios</button>
             </article>
         </main>
 
+        <!--Modal ativado pelo clique do botão repertório-->
+        <div id="modal" class="modal">
+            <div class="modalContent">
+                <article>
+                    <h2>Swan Lake</h2>
+                    <p>
+                        O <em>Lago dos Cisnes</em> é uma das peças mais marcantes do ballet clássico mundial.<br> 
+                        O Teatro Bolshoi, de Moscou, estreou o espetáculo em 1877, com a coreografia elaborada por<br>
+                        Julius Reisinger a partir de uma composição encomendada a Tchaikovsky —<br> 
+                        autor de outras obras de impacto na história do ballet, como o <em>O Quebra Nozes</em> (1892).<br>    
+                    </p>
+                    <img src="imagens/bailarina.png" alt="bailarina">
+                </article> 
+                <button class="buttonClose">Ok</button>   
+            </div>
+        </div>
+
+        <!--Rodapé-->
         <footer>
             <p>© Copyright 2021. Todos os direitos reservados</p>
         </footer>

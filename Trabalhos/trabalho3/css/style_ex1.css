@@ -1,0 +1,103 @@
+/* Arquivo style.css da página...*/
+
+body {
+    /*Regras de texto*/
+    font-family: 'Times New Roman', Times, serif;
+
+    /*Regras para tamanho*/
+    margin: 0%;
+
+    /*Cores*/
+    color: #000000;
+    background-color: #e4dad8;
+}
+
+header, nav{
+    /*Regras para texto*/
+    font-size: 150%;
+    text-align: center;
+
+    /*Regras para tamanho*/
+    width: 100%; 
+    height: 100%;
+    top: 0%;
+    padding: 1%;
+}
+
+img{
+    /*Regras para tamanho*/
+    width: 250px; 
+    height: 200px;
+    border-radius: 100px;
+}   
+
+nav li{
+    /*Regras para tamanho*/
+    display: inline;
+    padding: 1%;
+    
+}
+
+nav a{
+    /*Regras para texto*/
+    text-decoration: none;
+}
+
+main,footer{
+    /*Regras para texto*/
+    font-size: 100%;
+    text-align: center;
+    
+    /*Regras para tamanho*/
+    width: 70%;
+    height: 70%;
+    padding: 1%;
+    border: 1px solid #9B9B9B;
+    margin: 0% auto;
+}
+
+footer{
+    border:none;
+    background-color: #000000;
+    color: white;
+}
+
+.modal{
+    background-color: #0006;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    overflow: auto;
+    z-index: 1;
+}
+
+.modalContent{
+    background-color: #5485b3;
+    margin:auto;
+    padding: 20px;
+    border: 0.5px solid #aaa;
+    box-shadow: 0 0 5px #333;
+
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.modalContent button{
+    width: 100%;
+    background-color: #a0bbee;
+    border-radius: 2px;
+    border: 1px solid #b6b6e6;
+    padding: 5px;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+}
