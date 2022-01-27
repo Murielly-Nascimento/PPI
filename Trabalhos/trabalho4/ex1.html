@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang = "pt-BR">
+
+    <head>
+       <meta charset = "UTF-8">
+       <!-- 1: Tag de responsividade -->
+       <meta name = "viewport" content="width=device-width, initial-scale=1">
+
+       <title>Exercício 1</title> 
+       
+       <!-- 2: Bootstrap CSS -->
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       <link rel="stylesheet" href="css/style.css">
+    </head> 
+
+    <body>
+        <!-- Cabeçalho principal, presente em todas as páginas-->
+        <header>
+            <h1>Formulário 1</h1>
+        </header>
+
+        <div class="container">
+
+            <!--Menu de naveção, com links para todas as páginas-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="ex1.html">Exercício 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ex2.html">Exercício 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ex3.html">Exercício 3</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!--Conteúdo principal da página-->
+            <main>
+                <form class="row g-3">
+
+                    <div class="col-sm">
+                        <label for = "pNome" class="form-label">Prim. Nome</label>
+                        <input type = "text" class="form-control" id = "pNome" name = "pNome">
+                    </div>
+
+                    <div class="col-sm">
+                        <label for = "sNome" class="form-label">Seg. Nome</label>
+                        <input type = "text" class="form-control" id = "sNome" name = "sNome">
+                    </div>
+
+                    <div class="col-sm">
+                        <label for = "uNome" class="form-label">Ult. Nome</label>
+                        <input type = "text" class="form-control" id = "uNome" name = "uNome">
+                    </div>
+
+                    <div>
+                        <label for = "email" class="form-label">Email</label>
+                        <input type = "email" class="form-control"  id = "email" name = "email" placeholder="Informe seu email">
+                    </div>
+
+                    <div>
+                        <label for = "senha" class="form-label">Senha</label>
+                        <input type = "password" class="form-control" id = "senha" name = "senha" placeholder="Informe sua senha">
+                    </div>
+                </form>
+            </main>
+        </div>
+
+        <!--Rodapé-->
+        <footer>
+            <p>© Copyright 2022. Todos os direitos reservados</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>
