@@ -1,0 +1,37 @@
+/* Arquivo style.css da página...*/
+
+body {
+    /*Regras de texto*/
+    font-family: Helvetica, Arial, sans-serif;
+
+    /*Regras para tamanho*/
+    margin: 0%;
+
+    /*Cores*/
+    color: #000000;
+    background-color: #f8f9fa;
+}
+
+header{
+    /*Regras para texto*/
+    text-align: center;
+    margin: 10px;
+}
+
+nav{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+footer{
+    /*Regras para texto*/
+    font-size: 100%;
+    text-align: center;
+    
+    /*Regras para tamanho*/
+    width: 70%;
+    height: 70%;
+    padding: 1%;
+    margin: 0% auto;
+}
