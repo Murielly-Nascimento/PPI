@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Tag de responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Médico</title>
+
+    <!-- Bootstrap e CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style_login.css">
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <h3>Médico</h3>
+
+            <form method="POST" class="row g-3">
+
+                <!-- Especialidade -->
+                <div class="col-sm-12">
+                    <label for="especialidade" class="form-label">Especialidade</label>
+                    <select id="especialidade" name="especialidade" class="form-select" onchange=seleciona(this.value)>
+                        <option value="cardiologia"> Cardiologia
+                        <option value="dermatologia"> Dermatologia
+                        <option value="oftalmologia"> Oftalmologia
+                    </select>
+                </div>
+
+                <!-- Selecionados -->
+                <div class="col-sm-12">
+                    <label for="selecionado" class="form-label">Selecionados</label>
+                    <select id="selecionado" name="selecionado" class="form-select">
+                    </select>
+                </div>
+
+            </form>
+
+        </main>
+    </div>
+    <script>
+        function seleciona(valor) {
+            console.log(valor);
+
+            fetch("pesquisa.php?especialidade=" + valor)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(response.status);
+                    }
+
+                    return response.json();
+                })
+                .then(medicos => {
+                    let selecionado = document.querySelector("#selecionado");
+
+                    for (let medico of medicos) {
+                        var option = document.createElement("option");
+                        option.text = medico.nome + " - " + medico.telefone;
+                        option.value = valor;
+                        selecionado.appendChild(option);
+                    }
+                })
+                .catch(error => {
+                    selecionado.reset();
+                    console.error("String JSON inválida: " + xhr.responseText);
+                    return;
+                });
+        }
+    </script>
+
+</body>
+
+</html>
