@@ -1,0 +1,42 @@
+.btnNav{
+    padding: 11px !important;
+    color: azure !important;
+}
+
+.dropdown{
+    padding: 3px;
+    text-align: center;
+    margin-top: 5px;
+    background-color: rgba(8, 89, 131, 0.8);
+}
+
+.dropdown-menu > a{
+    background-color: azure;
+    color: rgba(8, 89, 131, 0.8);
+    padding: 8px;
+}
+
+.dropdown-menu > a:hover{
+    color: rgba(8, 89, 131, 0.8);
+    background-color: azure;
+    border: rgba(8, 89, 131, 0.8) solid 0.1px;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.dropdown button:hover, a:hover{
+    border: azure solid 0.1px;
+    border-radius: 5px;
+    color: azure;
+}
+
+#currently-active-tab {
+    pointer-events: none;
+    background-color: rgba(8, 89, 131, 0.8);
+    color: azure;
+    border-radius: 5px;
+}
+
+#dropdown-medico{
+    display: none;
+}

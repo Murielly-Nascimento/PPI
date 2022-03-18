@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cadastro de Endereço">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Cadastro de Endereço</title>
+</head>
+
+<body>
+    <!-- Cabeçalho principal, presente em todas as páginas-->
+    <header>
+        <img src="imagens/logotype.png" width="200" height="200" alt="logotipo da Clínica Aquae Vitae">
+        <h1>Clínica Aquae Vitae</h1>
+    </header>
+
+    <!--Menu de naveção, com links para todas as páginas-->
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./galeria.html">Galeria</a>
+        <a href="./cad_agendamento.html">Agendamento</a>
+        <a id="currently-active-tab" href="./cad_endereco.html">Novo Endereço</a>
+        <a href="./login.html">Login</a>
+    </nav>
+
+    <div class="container">
+        <main>
+            <form action="CAD_endereco.php" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend class="subtitulo">Dados do Endereço</legend>
+
+                    <div class="row m-3 g-3">
+                        <div class="col-md-6">
+                            <label for="cep" class="form-label">CEP:</label>
+                            <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}.*" placeholder="xxxxx-xxx"
+                                class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cidade" class="form-label">Cidade:</label>
+                            <input type="text" id="cidade" name="cidade" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row m-3 g-3">
+                        <div class="col-md-4">
+                            <label for="estado" class="form-label">Estado:</label>
+                            <select id="estado" name="estado" class="form-select">
+                                <option value="">Selecione..</option>
+                            </select>
+                        </div>
+                        <div class="col-md-8">
+                            <label for="logradouro" class="form-label">Logradouro: </label>
+                            <input type="text" id="logradouro" name="logradouro" class="form-control" required>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="d-grid gap-2 col-3 mx-auto my-4">
+                    <button class="btn btn-light" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-send-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89.471-1.178-1.178.471L5.93 9.363l.338.215a.5.5 0 0 1 .154.154l.215.338 7.494-7.494Z" />
+                        </svg>
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <!--Rodapé-->
+    <footer>
+        © Copyright 2021. Todos os direitos reservados.
+    </footer>
+
+
+    <script src="./js/estados.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", iniciaPagina);
+
+        function iniciaPagina() {
+            /*Chama função para adicionar Bootstrap*/
+            adicionaBootstrap();
+
+            /*Define quando a função adicionaEstados é executada*/
+            const campoEstado = document.querySelector("#estado");
+            campoEstado.addEventListener("click", adicionaEstados(campoEstado));
+        }
+    </script>
+
+</body>
+
+
+</html>
