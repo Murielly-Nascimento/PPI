@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Prova de PPI - 2022-01</title>
+	</head>
+
+<body>
+
+	<form>
+
+		<div>
+			<label for="id_automovel">Informe id do automovel:</label>
+			<input type="text" id="id_automovel" name="id_automovel">
+		</div>
+
+		<div>
+			<label for="marca">Marca:</label>
+			<input type="text" id="marca" name="marca">
+		</div>
+
+		<div>
+			<label for="modelo">Modelo:</label>
+			<input type="text" id="modelo" name="modelo">
+		</div>
+
+		<div>
+			<label for="cor">Cor:</label>
+			<input type="text" id="cor" name="cor">
+		</div>
+
+	</form>
+
+	<script>
+
+		function buscaAutomovel(id) {
+
+			let form = document.querySelector("form");
+
+			fetch("questao3.php?id=" + id)
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(response.status);
+				}
+					return response.json();
+			})
+			.then(automovel => {
+				form.marca.value = automovel.marca;
+				form.modelo.value = automovel.modelo;
+				form.cor.value = automovel.cor;
+			})
+			.catch(error => {
+				form.reset();
+				console.error('Falha inesperada: ' + error);
+			});
+		}
+
+		window.onload = function () {
+			const inputId = document.querySelector("#id_automovel");
+			inputId.onkeyup = () => buscaAutomovel(inputId.value);
+		}
+	</script>
+</body>
+</html>

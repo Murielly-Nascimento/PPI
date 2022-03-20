@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name = "viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<title>11921BSI222</title>
+		<style>
+			body{
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+				margin: 0 auto;
+				background-color: lightgray;
+			}
+
+			header {
+				background-color: black;
+				color: lightgray;
+				text-align: center;
+				padding: 20px;
+			}
+
+			main{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				border: 0.5px solid black;
+				width: 50%;
+				padding: 90px;
+			}
+
+			footer{
+				margin-top: 450px;
+				padding: 20px;
+				font-size: 100%;
+				text-align: center;
+				background-color: black;
+				color: lightgray;
+			}
+			h3,p{
+				padding: 5px;
+			}
+			#mensagem{
+				height: 50px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<header>
+			<h1>Bem Vindo!</h1>
+		</header>
+		
+		<main>
+			<h3>Deixe a sua mensagem(fundo na cor #dedede)</h3>
+			<form class="row g-3">
+				<div class="col-sm-6">
+					<label for = "nome" class="form-label">Nome</label>
+					<input type = "text" class="form-control" id = "nome" name = "nome">
+				</div>
+				<div class="col-sm-6">
+					<label for = "email" class="form-label">E-mail</label>
+					<input type = "email" class="form-control" id = "email" name = "email">
+				</div>
+				<div class="col-sm">
+					<label for = "mensagem" class="form-label">Mensagem</label>
+					<input type = "text" class="form-control" id = "mensagem" name = "mensagem">
+				</div>
+			</form>
+
+			<p><strong>Cuidado:</strong> tenha atenção aos detalhes!</p>
+		</main>
+		
+
+        <footer>
+			<p>Rodapé - Rua ABC, n° 123</p>
+		</footer>
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+</html>
